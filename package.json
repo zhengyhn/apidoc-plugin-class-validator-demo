@@ -1,0 +1,42 @@
+{
+  "name": "apidoc-plugin-class-validator-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "doc": "./node_modules/.bin/apidoc -i src/ -o docs",
+    "start": "./node_modules/.bin/nodemon --watch 'src/' --exec './node_modules/.bin/ts-node' ./src/app.ts",
+    "ftest": "mocha -bail --exit --compilers ts:ts-node/register -R spec -t 50000 -r should --recursive src/functionalTest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhengyhn/apidoc-plugin-class-validator-demo.git"
+  },
+  "author": "hank <yuanhang.zheng@qq.com> (http://zhengyhn.github.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhengyhn/apidoc-plugin-class-validator-demo/issues"
+  },
+  "homepage": "https://github.com/zhengyhn/apidoc-plugin-class-validator-demo#readme",
+  "dependencies": {
+    "class-transformer": "^0.2.0",
+    "class-validator": "^0.9.1",
+    "koa": "^2.6.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "reflect-metadata": "^0.1.12"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.12.18",
+    "apidoc": "^0.17.7",
+    "apidoc-plugin-class-validator": "0.0.1",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.9",
+    "should": "^13.2.3",
+    "supertest": "^3.3.0",
+    "ts-node": "^7.0.1",
+    "tslint-config-klg": "^1.0.5"
+  }
+}
